@@ -1,0 +1,6 @@
+package servicos;
+
+public interface ServicoJuros {
+ double getServicoJuros();
+ double pagamento(double valor, int mes);
+}
