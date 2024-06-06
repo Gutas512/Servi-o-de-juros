@@ -1,0 +1,23 @@
+package servicos;
+
+public class servicoBrasil {
+
+    private double TaxadeJuro;
+
+    public servicoBrasil(double TaxadeJuro) {
+        this.TaxadeJuro = TaxadeJuro;
+    }
+
+    public double pagamento(double valor, int mes) {
+        return valor * Math.pow(1 + TaxadeJuro / 100, mes);
+    }
+
+    public static void main(String[] args) {
+     
+    	servicoBrasil servico = new servicoBrasil(2.0);
+        double valor = 200.00;
+        int mes = 3;
+        double pagamento = servico.pagamento(valor,mes);
+        System.out.printf("Payment after %d months: %.2f%n", mes, pagamento);
+    }
+}
