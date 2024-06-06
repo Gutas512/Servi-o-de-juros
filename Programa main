@@ -1,0 +1,22 @@
+package aplicacao;
+
+import servicos.servicoBrasil;
+import servicos.ServicoUSA;
+
+public class Program {
+
+	public static void main(String[] args) {
+   
+		ServicoUSA servico = new ServicoUSA(1.0);
+        double valor = 200.00;
+        int mes = 3;
+        double pagamento = servico.pagamento(valor, mes);
+        System.out.printf("Pagamento depois(USA) de %d meses : %.2f%n", mes, pagamento);
+        
+        servicoBrasil servico2 = new servicoBrasil(2.0);
+        double valor2 = 200.00;
+        int mes2 = 3;
+        double pagamento2 = servico2.pagamento(valor2, mes2);
+        System.out.printf("Pagamento depois(BR) de %d meses: %.2f%n", mes2, pagamento2);
+    }
+}
